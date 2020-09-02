@@ -1,0 +1,14 @@
+# docker-compose.yml
+version: '3'
+services:
+  database:
+    image: "postgres:11.1-alpine"
+    container_name: "database"
+    environment:
+      - POSTGRES_USER=user_name
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=database
+    ports:
+      - "5432:5432"
+volumes:
+  database-data: # named volumes can be managed easier using docker-compose

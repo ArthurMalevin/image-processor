@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "725d5cbb-b671-4793-a98f-9720c88bc258",
+		"name": "image-processor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "flush image",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/image/flush/original/?reference=066/670/13_0666702579000000_pro_flt_frt_01_1108_1528_4747501.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"image",
+						"flush",
+						"original",
+						""
+					],
+					"query": [
+						{
+							"key": "reference",
+							"value": "066/670/13_0666702579000000_pro_flt_frt_01_1108_1528_4747501.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get image",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Image",
+							"type": "file",
+							"src": "/C:/Users/Artur_Malevin/Desktop/Без названия.png",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/image/show/thumbnail/dept-blazer/?reference=066/670/13_0666702579000000_pro_flt_frt_01_1108_1528_4747501.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"image",
+						"show",
+						"thumbnail",
+						"dept-blazer",
+						""
+					],
+					"query": [
+						{
+							"key": "reference",
+							"value": "066/670/13_0666702579000000_pro_flt_frt_01_1108_1528_4747501.jpg"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

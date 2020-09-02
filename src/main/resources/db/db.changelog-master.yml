@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: Arthur Malevin
+      changes:
+        - createTable:
+            tableName: logs
+            columns:
+              - column:
+                  name: user_id
+                  type: varchar(100)
+              - column:
+                  name: dated
+                  type: varchar(100)
+              - column:
+                  name: logger
+                  type: varchar(100)
+              - column:
+                  name: level
+                  type: varchar(10)
+              - column:
+                  name: message
+                  type: varchar(1000)

@@ -1,0 +1,32 @@
+amazonProperties:
+  endpointUrl: https://s3.us-east-2.amazonaws.com
+  accessKey: xxx
+  secretKey: xxx
+  bucketName: malevin-bucket
+server:
+  default-source: https://cdn-1.debijenkorf.nl/web_lister_2x/dior-zonnebril-dior180
+  error:
+    whitelabel:
+      enabled: false
+local:
+  directory: /tmp/image-processor/
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/database
+    username: user_name
+    password: password
+  liquibase:
+    change-log: classpath:db/db.changelog-master.yml
+  jpa:
+    show-sql: true
+
+
+
+
+
+
+
+
+
+
